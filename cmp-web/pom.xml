@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tongtech</groupId>
+        <artifactId>tongcmp</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.tongtech.cmp</groupId>
+    <artifactId>cmp-web</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>cmp-web</name>
+    <packaging>war</packaging>
+    <description>web module for TongCMP</description>
+    <dependencies>
+        <!--*********************springBoot web *********************-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--部署成war包时开启↓↓↓↓-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--部署成war包时开启↑↑↑↑-->
+
+        <!-- ********************* swagger2 ********************* -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-staticdocs</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.swagger2markup</groupId>
+            <artifactId>swagger2markup</artifactId>
+        </dependency>
+
+        <!-- ********************* cmp service ********************* -->
+        <dependency>
+            <groupId>com.tongtech.cmp</groupId>
+            <artifactId>cmp-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tongtech.cmp</groupId>
+            <artifactId>cmp-common</artifactId>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>jcenter-releases</id>
+            <name>jcenter</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

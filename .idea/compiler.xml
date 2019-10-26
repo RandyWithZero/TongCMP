@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cmp-common" />
+        <module name="cmp-dao" />
+        <module name="cmp-jenkins" />
+        <module name="cmp-kube" />
+        <module name="cmp-permission" />
+        <module name="cmp-service" />
+        <module name="cmp-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cmp-common" target="1.8" />
+      <module name="cmp-dao" target="1.8" />
+      <module name="cmp-jenkins" target="1.8" />
+      <module name="cmp-kube" target="1.8" />
+      <module name="cmp-permission" target="1.8" />
+      <module name="cmp-service" target="1.8" />
+      <module name="cmp-web" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="TongCMP" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TongCMP.iml" filepath="$PROJECT_DIR$/TongCMP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmp-common/cmp-common.iml" filepath="$PROJECT_DIR$/cmp-common/cmp-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmp-dao/cmp-dao.iml" filepath="$PROJECT_DIR$/cmp-dao/cmp-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmp-jenkins/cmp-jenkins.iml" filepath="$PROJECT_DIR$/cmp-jenkins/cmp-jenkins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmp-kube/cmp-kube.iml" filepath="$PROJECT_DIR$/cmp-kube/cmp-kube.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmp-permission/cmp-permission.iml" filepath="$PROJECT_DIR$/cmp-permission/cmp-permission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmp-service/cmp-service.iml" filepath="$PROJECT_DIR$/cmp-service/cmp-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmp-web/cmp-web.iml" filepath="$PROJECT_DIR$/cmp-web/cmp-web.iml" />
+    </modules>
+  </component>
+</project>
