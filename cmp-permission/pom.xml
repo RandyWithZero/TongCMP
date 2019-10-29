@@ -11,6 +11,7 @@
 	<artifactId>cmp-permission</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>cmp-permission</name>
+    <packaging>jar</packaging>
 	<description>User and Permission module for TongCMP</description>
 
 </project>

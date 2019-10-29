@@ -33,5 +33,6 @@
             <groupId>com.tongtech.cmp</groupId>
             <artifactId>cmp-common</artifactId>
         </dependency>
+
     </dependencies>
 </project>

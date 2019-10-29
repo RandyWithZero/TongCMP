@@ -10,6 +10,7 @@
 	<groupId>com.tongtech.cmp</groupId>
 	<artifactId>cmp-dao</artifactId>
 	<version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 	<name>cmp-dao</name>
 	<description>database operation module of TongCMP</description>
 </project>

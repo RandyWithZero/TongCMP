@@ -41,6 +41,15 @@ public class KubeApi {
         return new ConfigMapOperate(this.coreV1Api);
     }
 
+    public DeploymentOperate deploymentOperate() {
+        appsV1Api();
+        return new DeploymentOperate(this.appsV1Api);
+    }
+
+    public DaemonSetOperate daemonSetOperate() {
+        appsV1Api();
+        return new DaemonSetOperate(this.appsV1Api);
+    }
 
     private synchronized void appsV1Api() {
         if (this.appsV1Api == null) {

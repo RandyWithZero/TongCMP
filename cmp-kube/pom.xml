@@ -10,6 +10,7 @@
     <groupId>com.tongtech.cmp</groupId>
     <artifactId>cmp-kube</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>cmp-kube</name>
     <description>kubernetes module for TongCMP about operation of kubernetes resources</description>
     <properties>

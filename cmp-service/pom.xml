@@ -11,6 +11,7 @@
 	<artifactId>cmp-service</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>cmp-service</name>
+    <packaging>jar</packaging>
 	<description>service module  for TongCMP</description>
 
 
