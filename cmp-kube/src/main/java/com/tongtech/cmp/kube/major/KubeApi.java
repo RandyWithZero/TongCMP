@@ -20,10 +20,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class KubeApi {
     private ApiClient apiClient;
-    private volatile AppsV1Api appsV1Api;
-    private volatile CoreV1Api coreV1Api;
-    private volatile RbacAuthorizationApi rbacAuthorizationApi;
-    private volatile BatchV1Api batchV1Api;
+    private AppsV1Api appsV1Api;
+    private CoreV1Api coreV1Api;
+    private RbacAuthorizationApi rbacAuthorizationApi;
+    private BatchV1Api batchV1Api;
 
     KubeApi(ApiClient apiClient) {
         this.apiClient = apiClient;

@@ -29,10 +29,10 @@ import java.util.concurrent.ConcurrentHashMap;
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class KubeApiSupporter {
     private static Map<String, KubeApi> apis = new ConcurrentHashMap<>(4);
-    private volatile String currentApi;
-    private volatile String currentJsonPatchApi;
-    private volatile String currentStrategicMergePatchApi;
-    private volatile String currentApplyYamlPatchApi;
+    private String currentApi;
+    private String currentJsonPatchApi;
+    private String currentStrategicMergePatchApi;
+    private String currentApplyYamlPatchApi;
 
     public KubeApi getCurrentApi() {
         return apis.get(this.currentApi);
