@@ -1,14 +1,15 @@
 package com.tongtech.cmp.web;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 
 @SpringBootTest
-class CmpWebApplicationTests {
+public class CmpWebApplicationTests {
 
 	@Test
-	void contextLoads() {
+public 	void contextLoads() {
 	}
 
 }

@@ -1,13 +1,14 @@
 package com.tongtech.cmp.jenkins;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CmpJenkinsApplicationTests {
+public class CmpJenkinsApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
