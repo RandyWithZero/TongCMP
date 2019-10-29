@@ -22,6 +22,9 @@ public class ConfigMap extends ProjectKubeResourceBase {
     private String namespace;
     private Map<String, String> data;
 
+    public ConfigMap() {
+    }
+
     public ConfigMap(String name, String namespace) {
         this.name = name;
         this.namespace = namespace == null ? "default" : namespace;

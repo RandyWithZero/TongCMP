@@ -1,6 +1,5 @@
-package com.tongtech.cmp.kube.apis;
+package com.tongtech.cmp.kube.major;
 
-import com.tongtech.cmp.kube.apis.KubeApi;
 import io.kubernetes.client.ApiClient;
 import io.kubernetes.client.custom.V1Patch;
 import io.kubernetes.client.util.ClientBuilder;

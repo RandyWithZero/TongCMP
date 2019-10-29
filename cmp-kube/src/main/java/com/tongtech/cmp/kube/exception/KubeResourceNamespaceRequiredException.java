@@ -11,10 +11,10 @@ import com.tongtech.cmp.common.exception.TongCmpException;
  *
  * @author wangshaoqi
  */
-public class KubeResourceNameNotCorrectException extends TongCmpException {
-    private final static String MESSAGE = "资源命名错误，名称包含数字、小写字母、-，且-不能结尾和开头";
+public class KubeResourceNamespaceRequiredException extends TongCmpException {
+    private final static String MESSAGE = "资源命名空间 'namespace' (必须)";
 
-    public KubeResourceNameNotCorrectException() {
+    public KubeResourceNamespaceRequiredException() {
         super(MESSAGE);
     }
 }

@@ -1,6 +1,8 @@
 package com.tongtech.cmp.kube.model;
 
 import com.tongtech.cmp.common.constant.ProgramInformationConstant;
+import com.tongtech.cmp.common.constant.RegexRuleConstant;
+import com.tongtech.cmp.kube.exception.KubeResourceNameNotCorrectException;
 import com.tongtech.cmp.kube.util.StringUtil;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,6 +10,8 @@ import lombok.ToString;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * description 定义项目中资源的父类
@@ -43,5 +47,13 @@ public class ProjectKubeResourceBase {
 
     public void addAnnotation(String annotationKey, String annotationValue) {
         annotations.put(annotationKey, annotationValue);
+    }
+
+    public void addLabelMap(Map<String, String> labels) {
+        this.labels.putAll(labels);
+    }
+
+    public void addAnnotationMap(Map<String, String> annotations) {
+        this.annotations.putAll(annotations);
     }
 }

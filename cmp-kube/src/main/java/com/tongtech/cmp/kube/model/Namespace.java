@@ -13,4 +13,7 @@ public class Namespace extends ProjectKubeResourceBase {
     public Namespace(String name) {
         this.name = name;
     }
+
+    public Namespace() {
+    }
 }

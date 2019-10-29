@@ -50,7 +50,7 @@ public final class StringUtil {
      * @param str 目标Str
      */
     public static Map<String, String> stringToMap(String str) {
-        HashMap<String, String> map = new HashMap<>(4);
+        Map<String, String> map = new HashMap<>(4);
         String[] labelArray = str.split(",");
         for (String labelItem : labelArray) {
             String labelKey = labelItem.substring(0, labelItem.indexOf("="));
@@ -58,5 +58,32 @@ public final class StringUtil {
             map.put(labelKey, labelValue);
         }
         return map;
+    }
+
+    /**
+     * 比较两个map元素是否都一样
+     *
+     * @param map1 目标map1
+     * @param map2 目标map2
+     * @return boolean 返回结果
+     */
+    public static boolean compareMap(Map<String, String> map1, Map<String, String> map2) {
+        if (map1 == null || map2 == null) {
+            return false;
+        }
+        if (map1.size() != map2.size()) {
+            return false;
+        }
+        for (String key : map1.keySet()) {
+            if (map1.get(key) == null && map2.get(key) == null) {
+                continue;
+            } else if (map1.get(key) == null || map2.get(key) == null) {
+                return false;
+            }
+            if (!map1.get(key).equals(map2.get(key))) {
+                return false;
+            }
+        }
+        return true;
     }
 }
