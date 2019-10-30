@@ -27,6 +27,7 @@ public class DeploymentOperationRegion implements OperationRegion {
     private List<String> removeDataKeys;
 
     DeploymentOperationRegion(String op, AppsV1Api appsV1Api) {
+        this.op=op;
         this.appsV1Api = appsV1Api;
     }
 
@@ -46,22 +47,27 @@ public class DeploymentOperationRegion implements OperationRegion {
     }
 
     private void create() throws ApiException {
+        //todo
 
     }
 
     private void edit() throws ApiException {
+        //todo
 
     }
 
     private void get() throws ApiException {
+        //todo
 
     }
 
     private void list() throws ApiException {
+        //todo
 
     }
 
     private void delete() throws ApiException {
+        //todo
 
     }
 }

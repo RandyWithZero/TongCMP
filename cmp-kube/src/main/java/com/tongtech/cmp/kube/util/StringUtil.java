@@ -53,8 +53,8 @@ public final class StringUtil {
         Map<String, String> map = new HashMap<>(4);
         String[] labelArray = str.split(",");
         for (String labelItem : labelArray) {
-            String labelKey = labelItem.substring(0, labelItem.indexOf("="));
-            String labelValue = labelItem.substring(labelItem.indexOf("=") + 1);
+            String labelKey = labelItem.substring(0, labelItem.indexOf('='));
+            String labelValue = labelItem.substring(labelItem.indexOf('=') + 1);
             map.put(labelKey, labelValue);
         }
         return map;

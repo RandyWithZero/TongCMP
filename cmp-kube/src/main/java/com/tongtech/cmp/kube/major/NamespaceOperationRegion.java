@@ -182,8 +182,8 @@ public class NamespaceOperationRegion implements OperationRegion {
 
     private void edit() throws ApiException {
         get();
-        String labelPath = "/metadata/labels";
-        String annotationPath = "/metadata/annotations";
+        final String labelPath = "/metadata/labels";
+        final String annotationPath = "/metadata/annotations";
         List<HttpPatch> httpPatches = new ArrayList<>();
         Namespace namespace = ObjectTranslateUtil.kubeToPlatForm(Yaml.loadAs(this.returnValue, V1Namespace.class));
         if (namespace.getLabels() == null && this.namespace.getLabels() != null) {

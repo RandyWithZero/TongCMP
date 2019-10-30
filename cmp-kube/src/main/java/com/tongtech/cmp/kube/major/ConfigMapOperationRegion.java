@@ -156,9 +156,9 @@ public class ConfigMapOperationRegion implements OperationRegion {
 
     private void edit() throws ApiException {
         get();
-        String labelPath = "/metadata/labels";
-        String annotationPath = "/metadata/annotations";
-        String dataPath = "/data";
+        final String labelPath = "/metadata/labels";
+        final String annotationPath = "/metadata/annotations";
+        final String dataPath = "/data";
         List<HttpPatch> httpPatches = new ArrayList<>();
         ConfigMap configMap = ObjectTranslateUtil.kubeToPlatForm(Yaml.loadAs(this.returnValue, V1ConfigMap.class));
         if (configMap.getLabels() == null && this.configMap.getLabels() != null) {

@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,22 +20,22 @@ import java.util.Map;
 @Getter
 @Setter
 @ToString
-public class ConfigMap extends ProjectKubeResourceBase {
+public class Deployment extends ProjectKubeResourceBase {
     private String namespace="default";
-    private Map<String, String> data;
-
-    public ConfigMap() {
+    private int replicas;
+    private List<Pod> podList;
+    private Map<String,String> selector;
+    public Deployment() {
     }
-
-    public ConfigMap(String name, String namespace) {
+    public Deployment(String name, String namespace,int replicas) {
         this.name = name;
+        this.replicas=replicas;
         if(namespace!=null) {
             this.namespace =  namespace;
         }
     }
-
-    public ConfigMap(String name, String namespace, Map<String, String> data) {
-        this(name, namespace);
-        this.data = data;
+    public Deployment(String name, String namespace,int replicas,List<Pod> pods) {
+         this(name, namespace,replicas);
+         this.podList=pods;
     }
 }

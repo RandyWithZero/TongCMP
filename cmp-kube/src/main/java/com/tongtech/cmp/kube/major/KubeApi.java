@@ -6,6 +6,7 @@ import io.kubernetes.client.apis.AppsV1Api;
 import io.kubernetes.client.apis.BatchV1Api;
 import io.kubernetes.client.apis.CoreV1Api;
 import io.kubernetes.client.apis.RbacAuthorizationApi;
+import io.kubernetes.client.util.ClientBuilder;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -50,6 +51,26 @@ public class KubeApi {
         appsV1Api();
         return new DaemonSetOperate(this.appsV1Api);
     }
+
+    public ReplicaSetOperate replicaSetOperate() {
+        appsV1Api();
+        return new ReplicaSetOperate(this.appsV1Api);
+    }
+
+    public ReplicationControllerOperate replicationControllerOperate() {
+        appsV1Api();
+        return new ReplicationControllerOperate(this.appsV1Api);
+    }
+
+    public StatefulSetOperate statefulSetOperate() {
+        appsV1Api();
+        return new StatefulSetOperate(this.appsV1Api);
+    }
+    public ServiceOperate serviceOperate() {
+        coreV1Api();
+        return new ServiceOperate(this.coreV1Api);
+    }
+
 
     private synchronized void appsV1Api() {
         if (this.appsV1Api == null) {

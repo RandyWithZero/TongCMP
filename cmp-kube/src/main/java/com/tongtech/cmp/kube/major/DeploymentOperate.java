@@ -21,13 +21,11 @@ public class DeploymentOperate implements IKubernetesResourceOperate<DeploymentO
     @Override
     public DeploymentOperationRegion create() {
         return new DeploymentOperationRegion(OperationRegion.OP_CREATE, appsV1Api);
-
     }
 
     @Override
     public DeploymentOperationRegion delete() {
         return new DeploymentOperationRegion(OperationRegion.OP_DELETE, appsV1Api);
-
     }
 
     @Override
@@ -38,13 +36,10 @@ public class DeploymentOperate implements IKubernetesResourceOperate<DeploymentO
     @Override
     public DeploymentOperationRegion list() {
         return new DeploymentOperationRegion(OperationRegion.OP_LIST, appsV1Api);
-
-
     }
 
     @Override
     public DeploymentOperationRegion edit() {
-
         return new DeploymentOperationRegion(OperationRegion.OP_EDIT, appsV1Api);
     }
 

@@ -21,13 +21,11 @@ public class DaemonSetOperate implements IKubernetesResourceOperate<DaemonSetOpe
     @Override
     public DaemonSetOperationRegion create() {
         return new DaemonSetOperationRegion(OperationRegion.OP_CREATE, appsV1Api);
-
     }
 
     @Override
     public DaemonSetOperationRegion delete() {
         return new DaemonSetOperationRegion(OperationRegion.OP_DELETE, appsV1Api);
-
     }
 
     @Override
@@ -38,7 +36,6 @@ public class DaemonSetOperate implements IKubernetesResourceOperate<DaemonSetOpe
     @Override
     public DaemonSetOperationRegion list() {
         return new DaemonSetOperationRegion(OperationRegion.OP_LIST, appsV1Api);
-
 
     }
 

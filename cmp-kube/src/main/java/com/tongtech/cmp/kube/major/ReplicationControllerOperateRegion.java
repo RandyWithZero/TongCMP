@@ -17,7 +17,7 @@ import java.util.List;
  * @author wangshaoqi
  */
 @Slf4j
-public class DaemonSetOperationRegion implements OperationRegion {
+public class ReplicationControllerOperateRegion implements OperationRegion {
     private String op;
     private AppsV1Api appsV1Api;
     private String returnValue;
@@ -26,7 +26,8 @@ public class DaemonSetOperationRegion implements OperationRegion {
     private List<String> removeAnnotationKeys;
     private List<String> removeDataKeys;
 
-    DaemonSetOperationRegion(String op, AppsV1Api appsV1Api) {
+    ReplicationControllerOperateRegion(String op, AppsV1Api appsV1Api) {
+
         this.op=op;
         this.appsV1Api = appsV1Api;
     }

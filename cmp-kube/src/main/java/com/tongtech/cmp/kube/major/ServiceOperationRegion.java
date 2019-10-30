@@ -3,6 +3,7 @@ package com.tongtech.cmp.kube.major;
 import com.tongtech.cmp.kube.model.ConfigMap;
 import io.kubernetes.client.ApiException;
 import io.kubernetes.client.apis.AppsV1Api;
+import io.kubernetes.client.apis.CoreV1Api;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
@@ -17,18 +18,18 @@ import java.util.List;
  * @author wangshaoqi
  */
 @Slf4j
-public class DaemonSetOperationRegion implements OperationRegion {
+public class ServiceOperationRegion implements OperationRegion {
     private String op;
-    private AppsV1Api appsV1Api;
+    private CoreV1Api coreV1Api;
     private String returnValue;
     private List<ConfigMap> configMapList;
     private List<String> removeLabelKeys;
     private List<String> removeAnnotationKeys;
     private List<String> removeDataKeys;
 
-    DaemonSetOperationRegion(String op, AppsV1Api appsV1Api) {
+    ServiceOperationRegion(String op, CoreV1Api coreV1Api) {
         this.op=op;
-        this.appsV1Api = appsV1Api;
+        this.coreV1Api = coreV1Api;
     }
 
 
